@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KPI Software Development Lab 1</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+    <style type="text/css">
+        .logo {
+            max-height: 30px;
+        }
+        body .container.content {
+            padding: 80px 15px 0px;
+        }
+        html {
+            position: relative;
+            min-height: 100%;
+        }
+        body {
+            margin-bottom: 60px; /* Margin bottom by footer height */
+        }
+        .row {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 60px; /* Set the fixed height of the footer here */
+            line-height: 60px; /* Vertically center the text there */
+            background-color: #f5f5f5;
+        }
+
+        .cars_sprite {
+            background: url('images/cars_sprite.png') no-repeat top left;
+            width: 300px;
+            height: 200px;
+            opacity: 0.3;
+            transition: opacity 0.2s linear;
+        }
+        .cars_sprite:hover {
+            opacity: 1;
+            transition: opacity 0.2s linear;
+        }
+        .cars_sprite.tesla_model_s_2016_small { background-position: 0 0; }
+        .cars_sprite.lamborghini_veneno_supercar_3_small { background-position: -310px 0; }
+        .cars_sprite.lamborghini_aventador_lp_700_4_special_edition_2_small { background-position: -620px 0; }
+        .cars_sprite.bugatti_chiron___2017_small { background-position: -930px 0; }
+        .cars_sprite.mercedes_amg_gt_r_small { background-position: -1240px 0; }
+        .cars_sprite.acura_nsx_small { background-position: -1550px 0; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+            <a href="#" class="navbar-brand"><img class="logo" src="images/logo-dummy.png"></a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a class="nav-link" href="index.html">Main</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main" class="container content">
+        <div class="mt-3"><h1>Hello World!</h1></div>
+
+        <div class="row">
+            <div class="col-md-4"><div class='cars_sprite tesla_model_s_2016_small'></div></div>
+            <div class="col-md-4"><div class='cars_sprite lamborghini_veneno_supercar_3_small'></div></div>
+            <div class="col-md-4"><div class='cars_sprite lamborghini_aventador_lp_700_4_special_edition_2_small'></div></div>
+        </div>
+        <div class="row">
+            <div class="col-md-4"><div class='cars_sprite bugatti_chiron___2017_small'></div></div>
+            <div class="col-md-4"><div class='cars_sprite mercedes_amg_gt_r_small'></div></div>
+            <div class="col-md-4"><div class='cars_sprite acura_nsx_small'></div></div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <span class="text-muted">© Vitalii Vokhmin IKZ-41 2017</span>
+        </div>
+    </footer>
+</body>
+</html>
