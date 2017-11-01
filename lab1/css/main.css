@@ -9,7 +9,7 @@ html {
     min-height: 100%;
 }
 body {
-    margin-bottom: 60px; /* Margin bottom by footer height */
+    margin-bottom: 80px; /* Margin bottom by footer height */
 }
 .row {
     margin-top: 1rem;
@@ -33,4 +33,9 @@ body {
 .cars_sprite:hover {
     opacity: 1;
     transition: opacity 0.2s linear;
+}
+
+
+.modal .description {
+    text-align: center;
 }

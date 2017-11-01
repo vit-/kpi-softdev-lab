@@ -57,12 +57,14 @@ $(document).ready(function(){
     var cols = [];
     for (var i = 0; i < cars_data.images.length; i++) {
         var car = cars_data.images[i];
+        var link = $("<a data-toggle='modal' data-target='#infoModal'></a>").attr(
+            "data-url", car.url).attr("data-title", car.title).attr("data-description", car.description);
         var img = $("<div class='cars_sprite'></div>").css(
             "background", "url('" + cars_data.sprite + "') no-repeat top left"
         ).css(
             "background-position", car.sprite_position
-        ).attr("rel", car.url);
-        cols.push($("<div class='col-md-4'></div>").append(img));
+        );
+        cols.push($("<div class='col-md-4'></div>").append(link.append(img)));
         if (cols.length === 3) {
             renderCols(cols);
             cols = [];
@@ -71,4 +73,18 @@ $(document).ready(function(){
     if (cols.length > 0) {
         renderCols(cols);
     }
+});
+
+
+
+$(document).on('show.bs.modal', '#infoModal', function (event) {
+    console.log('hello!');
+    var button = $(event.relatedTarget);
+    var url = button.data("url");
+    var title = button.data("title");
+    var description = button.data("description");
+    var modal = $(this);
+    modal.find(".modal-title").text(title);
+    modal.find(".picture").attr("src", url);
+    modal.find(".description").text(description);
 });
