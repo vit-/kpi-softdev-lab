@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "url": "images/cars/tesla_model_s_2016.jpg",
+    "spriteArea": "0 0",
+    "spriteUrl": "images/cars_sprite.png",
+    "title": "Tesla Model S",
+    "description": "Electric mirracle from Elon Musk"
+  },
+  {
+    "id": 2,
+    "url": "images/cars/lamborghini_veneno_supercar_3.jpg",
+    "spriteArea": "-310px 0",
+    "spriteUrl": "images/cars_sprite.png",
+    "title": "Lamborghini Veneno",
+    "description": "Italian classic"
+  },
+  {
+    "id": 3,
+    "url": "images/cars/lamborghini_aventador_lp_700_4_special_edition_2.jpg",
+    "spriteArea": "-620px 0",
+    "spriteUrl": "images/cars_sprite.png",
+    "title": "Lamborghini Aventador",
+    "description": "Yet another Italian whroom-whroom"
+  },
+  {
+    "id": 4,
+    "url": "images/cars/bugatti_chiron___2017.jpg",
+    "spriteArea": "-930px 0",
+    "spriteUrl": "images/cars_sprite.png",
+    "title": "Bugatti Chiron",
+    "description": "This one costs a lot"
+  },
+  {
+    "id": 5,
+    "url": "images/cars/2018_mercedes_amg_gt_r.jpg",
+    "spriteArea": "-1240px 0",
+    "spriteUrl": "images/cars_sprite.png",
+    "title": "Mercedes ANG GTR",
+    "description": "German quality"
+  },
+  {
+    "id": 5,
+    "url": "images/cars/2017_acura_nsx.jpg",
+    "spriteArea": "-1550px 0",
+    "spriteUrl": "images/cars_sprite.png",
+    "title": "Acura NSX",
+    "description": "Japanese style"
+  }
+]
