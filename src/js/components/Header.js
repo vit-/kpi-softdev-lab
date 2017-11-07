@@ -5,7 +5,7 @@ import { Navbar, Nav, NavItem } from 'react-bootstrap';
 export default class Header extends React.Component {
     render() {
         return (
-            <Navbar collapseOnSelect>
+            <Navbar fixedTop collapseOnSelect>
                 <Navbar.Header>
                     <Navbar.Brand>
                         <a href='#'><img className='logo' src='/images/logo-dummy.png' /></a>

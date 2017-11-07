@@ -7,7 +7,7 @@ export default class Car extends React.Component {
             backgroundPosition: this.props.spriteArea
         };
         return (
-            <div className='row col-md-4'>
+            <div className='row col-lg-4 col-md-4 col-sm-6'>
                 <a onClick={this.props.carClick}>
                     <div className='carSprite' style={divStyle} data-url={this.props.url} title={this.props.title} data-description={this.props.description}>
                     </div>
