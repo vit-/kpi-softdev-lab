@@ -37,7 +37,7 @@ export default class CarGallery extends React.Component {
     }
 
     componentDidMount () {
-        axios.get('/data.json').then(res => {
+        axios.get('data.json').then(res => {
             const data = res.data;
             var cars = [];
             for (var i = 0; i < data.length; i++) {

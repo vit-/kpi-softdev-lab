@@ -1,11 +1,13 @@
 {
   "name": "myapp",
   "version": "0.1.0",
+  "homepage": "https://vit-.github.io/kpi-softdev-lab",
   "private": true,
   "dependencies": {
     "axios": "^0.17.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
+    "gh-pages": "^1.0.0",
     "react": "^16.0.0",
     "react-bootstrap": "^0.31.5",
     "react-dom": "^16.0.0",
@@ -15,6 +17,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   }
 }
