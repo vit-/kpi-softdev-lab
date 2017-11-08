@@ -9,9 +9,9 @@ export default class Layout extends React.Component {
         return (
             <div className='container'>
                 <Header />
-                <div className='body'>
+                <main className='body'>
                     <CarGallery />
-                </div>
+                </main>
                 <Footer />
             </div>
         );
