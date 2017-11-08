@@ -9,26 +9,23 @@ export default class CarGallery extends React.Component {
         super(props);
 
         this.state = {
+            carsData: [],
             cars: [],
             modalShow: false,
-            modalTitle: 'title',
-            modalDescription: 'description',
-            modalUrl: 'url'
+            modalCarIndex: 0
         };
     }
 
     handleCarClick(e) {
-        const car = e.target;
-        const data = car.dataset;
-        this.openModal(car.title, data.description, data.url);
-    }
-
-    openModal(title, description, url) {
         this.setState({
             modalShow: true,
-            modalTitle: title,
-            modalDescription: description,
-            modalUrl: url
+            modalCarIndex: parseInt(e.target.dataset.index)
+        });
+    }
+
+    handleCarouselSelect(selectedIndex, e) {
+        this.setState({
+            modalCarIndex: selectedIndex
         });
     }
 
@@ -38,13 +35,13 @@ export default class CarGallery extends React.Component {
 
     componentDidMount () {
         axios.get('data.json').then(res => {
-            const data = res.data;
+            const carsData = res.data;
             var cars = [];
-            for (var i = 0; i < data.length; i++) {
-                var car = data[i];
-                cars.push(<Car carClick={this.handleCarClick.bind(this)} title={car.title} description={car.description} url={car.url} spriteUrl={car.spriteUrl} spriteArea={car.spriteArea} />);
+            for (var i = 0; i < carsData.length; i++) {
+                const car = carsData[i];
+                cars.push(<Car carClick={this.handleCarClick.bind(this)} title={car.title} carIndex={i} spriteUrl={car.spriteUrl} spriteArea={car.spriteArea} />);
             }
-            this.setState({cars});
+            this.setState({cars, carsData});
         });
     }
 
@@ -52,7 +49,7 @@ export default class CarGallery extends React.Component {
         return (
             <div>
                 {this.state.cars}
-                <CarInfoModal show={this.state.modalShow} close={this.closeModal.bind(this)} title={this.state.modalTitle} description={this.state.modalDescription} url={this.state.modalUrl} />
+                <CarInfoModal show={this.state.modalShow} close={this.closeModal.bind(this)} carsData={this.state.carsData} carIndex={this.state.modalCarIndex} onSelect={this.handleCarouselSelect.bind(this)} />
             </div>
         );
     }

@@ -9,7 +9,7 @@ export default class Car extends React.Component {
         return (
             <div className='row col-lg-4 col-md-4 col-sm-6'>
                 <a onClick={this.props.carClick}>
-                    <div className='carSprite' style={divStyle} data-url={this.props.url} title={this.props.title} data-description={this.props.description}>
+                    <div className='carSprite' style={divStyle} title={this.props.title} data-index={this.props.carIndex}>
                     </div>
                 </a>
             </div>
