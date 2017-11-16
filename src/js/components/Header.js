@@ -9,15 +9,17 @@ export default class Header extends React.Component {
             <Navbar fixedTop collapseOnSelect>
                 <Navbar.Header>
                     <Navbar.Brand>
-                        <a href='#'><img className='logo' src='images/logo-dummy.png' /></a>
+                        <Link to={process.env.PUBLIC_URL + '/'}>
+                            <img className='logo' src='images/logo-dummy.png' />
+                        </Link>
                     </Navbar.Brand>
                     <Navbar.Toggle />
                 </Navbar.Header>
                 <Navbar.Collapse>
                     <Nav>
-                        <NavItem><Link to='/gallery'>Gallery</Link></NavItem>
-                        <NavItem><Link to='/carorder'>Car Order</Link></NavItem>
-                        <NavItem><Link to='/about'>About</Link></NavItem>
+                        <NavItem><Link to={process.env.PUBLIC_URL + '/'}>Main</Link></NavItem>
+                        <NavItem><Link to={process.env.PUBLIC_URL + '/carorder'}>Car Order</Link></NavItem>
+                        <NavItem><Link to={process.env.PUBLIC_URL + '/about'}>About</Link></NavItem>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
