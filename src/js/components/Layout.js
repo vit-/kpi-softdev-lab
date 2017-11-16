@@ -15,7 +15,7 @@ export default class Layout extends React.Component {
             <div className='container'>
                 <Header />
                 <main className='body'>
-                    <Route exact path='/' component={CarGallery} />
+                    <Route path='/cars' component={CarGallery} />
                     <Route path='/carorder' component={CarOrder} />
                     <Route path='/about' component={About} />
                 </main>

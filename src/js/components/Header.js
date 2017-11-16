@@ -15,9 +15,9 @@ export default class Header extends React.Component {
                 </Navbar.Header>
                 <Navbar.Collapse>
                     <Nav>
-                        <NavItem><Link to='/'>Main</Link></NavItem>
-                        <NavItem><Link to='/about'>About</Link></NavItem>
+                        <NavItem><Link to='/cars'>Cars</Link></NavItem>
                         <NavItem><Link to='/carorder'>Car Order</Link></NavItem>
+                        <NavItem><Link to='/about'>About</Link></NavItem>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
